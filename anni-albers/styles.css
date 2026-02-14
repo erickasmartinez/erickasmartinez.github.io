@@ -20,14 +20,21 @@ h2 {
     margin-bottom: 3rem;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-    width: calc(100% * 3/6);
-    margin-top: 0;
-    margin-bottom: 2rem;
 
+
+
+#row2 p.callout {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-style: italic;
+    width: calc(100% * 2/6);
+    float: right;
+    text-align: right;
+    padding-left: 2em;
+    margin-top: 1.5rem;
 }
+
+
 
 p.callout {
     font-size: 2rem;
