@@ -14,13 +14,20 @@ h1 {
 }
 
 h2 {
-    font-size: 0.75rem;
+    font-size: 1.5rem;
     font-style: italic;
     width: calc(100% * 4/6);
     margin-bottom: 3rem;
 }
 
 
+p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: calc(100% * 3/6);
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
 
 
 p.callout {
