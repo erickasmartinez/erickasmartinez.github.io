@@ -40,12 +40,21 @@ p.callout {
     margin-top: 0;
 }
 
+#row2::after,
+#row5::after,
+#row7::after,
+#row9::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 #row1 p,
-#row3 p 
-#row6 p
-#row8 p
-#row10 p
-#row12 p
+#row3 p,
+#row6 p,
+#row8 p,
+#row10 p,
+#row12 p,
 #row13 p {
 
     margin-left: calc(100% * 1/6);
@@ -59,3 +68,6 @@ p.callout {
 
 }
 
+section {
+    margin-bottom: 3rem;
+}
