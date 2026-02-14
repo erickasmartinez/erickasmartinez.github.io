@@ -32,7 +32,6 @@ p.callout {
     font-size: 2rem;
     line-height: 2.2rem;
     font-style: italic;
-    width: calc(100% * 2/6);
     float: right;
     text-align: right;
     padding-left: 2em;
