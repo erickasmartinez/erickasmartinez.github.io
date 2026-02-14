@@ -78,3 +78,33 @@ p.callout {
     margin-left: calc(100% * 2/6);
 
 }
+
+
+/* ***************************************************************************** */
+/* CSS for index2 */
+
+
+/* Inherit the baseline main code, above, and add to it */ 
+#secondlayout main{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto ;
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas:
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......'
+    '......';
+}
+
+#secondlayout #titlerow{grid-area: title;}
+
+
