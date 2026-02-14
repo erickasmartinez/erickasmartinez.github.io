@@ -23,19 +23,6 @@ h2 {
 
 
 
-#row2 p.callout {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-style: italic;
-    width: calc(100% * 2/6);
-    float: right;
-    text-align: right;
-    padding-left: 2em;
-    margin-top: 1.5rem;
-}
-
-
-
 p.callout {
     font-size: 2rem;
     line-height: 2.5rem;
