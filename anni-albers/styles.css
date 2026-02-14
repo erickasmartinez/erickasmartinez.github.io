@@ -40,8 +40,15 @@ p.callout {
 
 }
 
-#row4 p  {
-    width: calc(100% * 3/6);
-    margin-left: calc(100% * 3/6);
 
+#row4 p {
+    width: calc(100% * 3/6);
+}
+
+#row4 p.left {
+    margin-left: 0;
+}
+
+#row4 p.right {
+    margin-left: calc(100% * 3/6);
 }
