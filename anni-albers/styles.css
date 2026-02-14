@@ -51,8 +51,6 @@ p.callout {
 
 #row1 p,
 #row3 p,
-#row6 p,
-#row8 p,
 #row10 p,
 #row12 p,
 #row13 p {
@@ -60,6 +58,14 @@ p.callout {
     margin-left: calc(100% * 1/6);
 
 }
+
+#row6 p,
+#row8 p {
+    width: calc(100% * 2/6);
+    margin-left: calc(100% * 1/6);
+}
+
+
 
 
 #row4 p {
