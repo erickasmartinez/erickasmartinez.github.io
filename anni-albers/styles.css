@@ -147,3 +147,16 @@ p.callout {
     padding-left: 0;
     text-align: left;
 }
+
+/* ===== grid layout overrides ===== */
+
+#secondlayout p {
+    width: 100%;
+}
+
+#secondlayout .callout {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: left;
+}
