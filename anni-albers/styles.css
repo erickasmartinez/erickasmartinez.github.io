@@ -79,12 +79,14 @@ p.callout {
 
 }
 
+/* ***************************************************************************** */
+/* CSS for index2 */
+/* Inherit the baseline main code, above, and add to it */
 
-/* ================= INDEX 2 GRID ================= */
 
 #secondlayout main {
     display: grid;
-    border: 4px solid red;
+    
 
     grid-template-columns: repeat(6, 1fr);
 
@@ -106,7 +108,10 @@ p.callout {
     "p13 p13 p13 p13 . .";
 }
 
-/* grid area assignments */
+
+
+/*assigning grid names to DOM elements*/
+
 
 #secondlayout #titlerow { grid-area: title; }
 #secondlayout #aboutauthor { grid-area: abtitle; }
@@ -130,12 +135,12 @@ p.callout {
 #secondlayout #callout3 { grid-area: c3; }
 #secondlayout #callout4 { grid-area: c4; }
 
-/* turn OFF float layout inside grid */
+/*overide the baseline p styles from above*/ 
 
 #secondlayout p,
 #secondlayout .callout {
-    width: 100%;
-    float: none;
-    padding-left: 0;
-    text-align: left;
+    margin: 1.5rem auto;
+    max-width: 80%; 
+    gap: 1rem;
+   
 }
