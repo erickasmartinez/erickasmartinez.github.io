@@ -137,6 +137,13 @@ p.callout {
 
 /*overide the baseline p styles from above*/
 
-#secondlayout p{
+#secondlayout p {
     width: 100%;
+}
+
+#secondlayout .callout {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: left;
 }
