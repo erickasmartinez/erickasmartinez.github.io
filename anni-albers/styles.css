@@ -199,8 +199,10 @@ p.callout {
 }
 
 #secondlayout .callout {
-    margin: 1.5rem auto;
-    max-width: 80%;
+    justify-self: center;
+    align-self: center;
+    margin: 2rem auto;
+    max-width: 70%;
     gap: 1rem;
 
 }
