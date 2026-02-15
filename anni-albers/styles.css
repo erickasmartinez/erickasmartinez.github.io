@@ -85,8 +85,12 @@ p.callout {
 
 
 /* Inherit the baseline main code, above, and add to it */
+
+
+
 #secondlayout main {
     display: grid;
+    border: 4px solid red;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: repeat(15, auto);
     grid-template-areas:
