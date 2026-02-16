@@ -125,7 +125,7 @@ p.callout {
     grid-area: abtitle;
 }
 
-#secondlayout #References {
+#secondlayout #Refs {
     grid-area: refs;
 }
 
