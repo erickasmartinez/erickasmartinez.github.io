@@ -125,6 +125,11 @@ p.callout {
     grid-area: abtitle;
 }
 
+#secondlayout #References {
+    grid-area: refs;
+}
+
+
 #secondlayout #para1 {
     grid-area: p1;
 }
@@ -219,6 +224,3 @@ p.callout {
 
 }
 
-#secondlayout #References {
-    grid-area: refs;
-}
