@@ -107,8 +107,9 @@ p.callout {
         "abtitle abtitle abtitle abtitle abtitle abtitle"
         "p12 p12 p12 p12 . ."
         "p13 p13 p13 p13 . ."
+        "refers refers refers refers refers refers"
         "p14 p14 p14 p14 . ." 
-        "p54 p15 p15 p15 . ."  ;
+        "p15 p15 p15 p15 . ."  ;
 }
 
 
@@ -216,4 +217,8 @@ p.callout {
     max-width: 70%;
     gap: 1rem;
 
+}
+
+#secondlayout #References {
+    grid-area: refs;
 }
