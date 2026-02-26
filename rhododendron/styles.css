@@ -1,8 +1,8 @@
-/* mobile design for Pacific Rhododendron layout */
+/* mobile-first design for Pacific Rhododendron layout */
 
-*{
+* {
     box-sizing: border-box;
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -15,48 +15,50 @@ header {
     height: 100vh;
 }
 
-#RhododendronPicture {
+#rhodiePicture {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-image: url("Pacific\ Rhododendron\ 2\ -\ Gary\ Monroe-1.jpeg");
     background-size: cover;
     background-position: center center;
-    
 }
 
-#RhododendronTitle {
+#rhodieTitle {
     position: absolute;
     width: 100vw;
     height: 100vh;
 }
 
-#RhododendronTitle h1 {
+#rhodieTitle h1 {
     position: absolute;
     bottom: 0;
     left: 1em;
     color: white;
     font-size: 2.5em;
     width: calc(100vw - 2em);
-
 }
 
-@media screen and (orientation:landscape) {
 
- #RhododendronPicture {
+/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
 
-    width: 50vw;
- }
 
- #RhododendronTitle {
+@media screen and (orientation: landscape) {
 
-    width: 50vw;
-    left: 50vw;
-    background-color: #333;
- }
+    #rhodiePicture {
+        width: 50vw;
+    }
+
+    #rhodieTitle {
+        width: 50vw;
+        left: 50vw;
+        background-color: #333;
+    }
+
+    #rhodieTitle h1 {
+        width: 45vw;
+    }
+
+    /* PUT THE REST OF THE DESKTOP LAYOUT HERE */
     
- #RhododendronTitle h1 {
-
-    width: 45vw;
- }
 }
