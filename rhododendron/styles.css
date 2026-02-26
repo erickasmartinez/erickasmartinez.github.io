@@ -45,17 +45,17 @@ header {
 
 @media screen and (orientation: landscape) {
 
-    #rhodiePicture {
+    #RhododendronPicture {
         width: 50vw;
     }
 
-    #rhodieTitle {
+    #RhododendronTitle {
         width: 50vw;
         left: 50vw;
         background-color: #333;
     }
 
-    #rhodieTitle h1 {
+    #RhododendronTitle h1 {
         width: 45vw;
     }
 
