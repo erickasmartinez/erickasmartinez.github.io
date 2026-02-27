@@ -51,7 +51,7 @@ header {
   flex-direction: column;
 }
 
-#mainBlock {
+#mainBlock div {
   flex-grow: 1;
 }
 
@@ -86,7 +86,7 @@ header {
         margin-bottom: 1em;
     }
 
-      #mainBlock {
+    #mainBlock {
     position: absolute;
     flex-direction: column;
     left: 50vw;
@@ -97,7 +97,7 @@ header {
 
   }
 
-  #mainblock div {
+  #mainBlock div {
 
     flex: 1;
     margin-bottom: 1em;
