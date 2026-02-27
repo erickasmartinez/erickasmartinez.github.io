@@ -28,8 +28,8 @@ header {
 #RhododendronTitle {
     position: absolute;
     width: 100vw;
-    height: 100vh;
-    display: block;
+    height: auto;
+
     background-color: transparent;
 }
 
