@@ -51,7 +51,7 @@ header {
   flex-direction: column;
 }
 
-#mainBlock div {
+#mainBlock {
   flex-grow: 1;
 }
 
