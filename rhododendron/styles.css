@@ -40,6 +40,22 @@ header {
     background-color: red;
 }
 
+#block1 { background-color: lightblue; }
+#block2 { background-color: lightgray; }
+#block3 { background-color: gold; }
+
+#mainBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainBlock div {
+  flex-grow: 1;
+}
+
+
+
 
 /* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
 
@@ -59,6 +75,11 @@ header {
     #RhododendronTitle h1 {
         width: 45vw;
     }
+
+      #mainBlock {
+    flex-direction: row;
+  }
+
 
     /* PUT THE REST OF THE DESKTOP LAYOUT HERE */
     
