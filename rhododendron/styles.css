@@ -43,6 +43,7 @@ header {
 #block1 { background-color: lightblue; }
 #block2 { background-color: lightgray; }
 #block3 { background-color: gold; }
+#block4 {background-color: pink; }
 
 #mainBlock {
   position: relative;
