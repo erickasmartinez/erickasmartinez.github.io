@@ -58,10 +58,6 @@ header {
   flex-grow: 1;
 }
 
-#mainBlock {
-    position: static;
-    margin-top: 100vh; 
-}
 
 
 
