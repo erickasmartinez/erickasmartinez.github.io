@@ -86,16 +86,13 @@ header {
 
     #RhododendronTitle h1 {
         width: 45vw;
-    
+     position: static;
         margin-bottom: 1em;
     }
 
     #mainBlock {
     position: absolute;
     flex-direction: column;
-    left: 50vw;
-    width: 50vw;
-    height: 100vh;
     display: flex;
     padding: 6em 2em 2em 2em;
 
