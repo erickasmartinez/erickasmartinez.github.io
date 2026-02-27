@@ -62,24 +62,45 @@ header {
 
 @media screen and (orientation: landscape) {
 
+    header {
+         height: 100vh;
+    }
+       
+    
     #RhododendronPicture {
         width: 50vw;
+       
     }
 
     #RhododendronTitle {
         width: 50vw;
+        height: 100vh;
         left: 50vw;
         background-color: #333;
     }
 
     #RhododendronTitle h1 {
         width: 45vw;
+        position: static;
+        margin-bottom: 1em;
     }
 
       #mainBlock {
-    flex-direction: row;
+    position: absolute;
+    flex-direction: column;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    padding: 6em 2em 2em 2em;
+
   }
 
+  #mainblock div {
+
+    flex: 1;
+    margin-bottom: 1em;
+  }
 
     /* PUT THE REST OF THE DESKTOP LAYOUT HERE */
     
