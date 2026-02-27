@@ -13,17 +13,17 @@ body {
 header {
     width: 100vw;
     height: 100vh;
-    position: relative;
+   
 }
 
 #RhododendronPicture {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url("Pacific Rhododendron 2 - Gary Monroe-1.jpeg");
+    background-image: url("Pacific\ Rhododendron\ 2\ -\ Gary\ Monroe-1.jpeg");
     background-size: cover;
     background-position: center center;
-    z-index: -1;
+
 }
 
 #RhododendronTitle {
@@ -31,7 +31,6 @@ header {
     width: 100vw;
     height: auto;
 
-    background-color: transparent;
 }
 
 #RhododendronTitle h1 {
@@ -44,9 +43,9 @@ header {
     background-color: red;
 }
 
-#block1 { background-color: lightblue; }
-#block2 { background-color: lightgray; }
-#block3 { background-color: gold; }
+#block1 { background-color: rgb(228, 89, 175); }
+#block2 { background-color: rgb(196, 99, 177); }
+#block3 { background-color: rgb(215, 136, 185); }
 #block4 {background-color: pink; }
 
 #mainBlock {
@@ -62,7 +61,7 @@ header {
 
 
 
-/* PUT THE REST OF THE MOBILE BASELINE LAYOUT HERE */
+/*  REST OF THE MOBILE BASELINE LAYOUT HERE */
 
 
 @media screen and (orientation: landscape) {
@@ -74,7 +73,6 @@ header {
     
     #RhododendronPicture {
         width: 50vw;
-        background-color: blue;
        
     }
 
@@ -109,6 +107,6 @@ header {
     margin-bottom: 1em;
   }
 
-    /* PUT THE REST OF THE DESKTOP LAYOUT HERE */
+   
     
 }
