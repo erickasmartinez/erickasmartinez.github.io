@@ -54,6 +54,7 @@ header {
 
 #mainBlock div {
   flex-grow: 1;
+  padding: 1em;
 }
 
 
