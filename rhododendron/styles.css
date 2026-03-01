@@ -29,8 +29,6 @@ header {
 #RhododendronTitle {
 
     width: 100vw;
-  
-
 }
 
 #RhododendronTitle h1 {
@@ -97,6 +95,7 @@ header {
     left: 50vw;
     width: 50vw;
     height: 100vh;
+    top: 0;
     padding: 6em 2em 2em 2em;
 
   }
