@@ -81,6 +81,7 @@ header {
         left: 50vw;
         background-color: #333;
         position: absolute;
+        font-size: 3.5em;
     }
 
     #RhododendronTitle h1 {
@@ -101,8 +102,14 @@ header {
 
   }
 
+#mainBlock h1 {
+    font-size: 2em;
 
+}
 
+#mainBlock li {
+font-size: 1.2em ;
+}
    
     
 }
