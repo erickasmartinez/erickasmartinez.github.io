@@ -92,23 +92,23 @@ header {
 
     #mainBlock {
     position: absolute;
-    flex-direction: column;
-    display: flex;
     left: 50vw;
     width: 50vw;
     height: 100vh;
     top: 0;
-    padding: 6em 2em 2em 2em;
+    padding: 20em 2em 2em 2em;
 
   }
 
 #mainBlock h1 {
     font-size: 2em;
+    margin-left: 0.5em;
 
 }
 
 #mainBlock li {
 font-size: 1.2em ;
+padding-left: .5em;
 }
    
     
