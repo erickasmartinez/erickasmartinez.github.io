@@ -38,7 +38,7 @@ header {
     color: white;
     font-size: 2.5em;
     width: calc(100vw - 2em);
-    background-color: red;
+  
 }
 
 #block1 { background-color: rgb(228, 89, 175); }
