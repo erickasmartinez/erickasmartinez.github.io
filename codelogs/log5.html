@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        section p {
+            max-width: 700px;
+            padding: 5px;
+            line-height: 1.5;
+            font-size: 20px;
+        }
+
+
+        section li {
+            margin-bottom: 10px;
+            padding: 5px;
+            line-height: 1.5;
+            max-width: 700px;
+            font-size: 20px;
+        }
+
+        section ul {
+            margin-top: 15px;
+
+        }
+
+        textarea {
+            display: block;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+
+            <h1>Code log 5: Images</h1>
+            <ol>
+
+                <li>What are the differences between presenting an image using an HTML tag
+                    (like <img>) and presenting it as the background of an HTML element (using
+                    the CSS property background-image) in terms of differences in code
+                    as well as differences in functionality and layout.
+
+                    <p> The difference between presenting an image using HTML tag of <img>
+                        and presenting it as a background image using CSS property is that for
+                        HTML tag the image is placed directly on the web page like having the
+                        image embedded into the page to make it as part of the content presented.
+                        On the other hand an image using CSS property is used for decorative purposes
+                        like placing a specific image behind HTML elements or other background properties. </p>
+                </li>
+                <textarea cols="40" rows="4">
+Html: img src="randomimage.jpg" 
+vs
+CSS: p {background-image: url("images/randomimage.jpg"); } 
+                
+                 </textarea>
+
+
+                <li>Two other CSS properties that affects the display of background images are:
+                    <ul>
+                        <li>Background size: Which determines the size for the background image based on four ways using
+                            the syntax keywords of auto, cover and contain. You can have one value to give the
+                            background image width with auto height or two values to give it a specific height in addition to
+                            width. Contain allows the background image to resize to fit the entire element. </li>
+
+                            <ol> 
+                                <li>Background size: 50px; means image 50px wide and auto adjusted height </li>  
+
+                                <li>Background size: 50px, 70px; means image 50px wide and 70px for height  </li>
+
+
+                            </ol>
+
+                        <li>Background position: Determines where to place the background image in an element such as
+                            the top, bottom, left and right, or center. Two words are used to specify placement, and one
+                            word is used for simple positioning. </li>
+
+                            <textarea cols="40" rows="4">
+Background-position: center; vs Background-position: bottom right;  
+                            </textarea>
+
+
+                    </ul>
+
+                </li>
+
+                <li>Defining the differences between dimensions and resolution in a bitmap image:
+
+                    <p> The difference between dimensions and resolutions in a bitmap image are that dimensions determine 
+                        the width and height of the bitmap in pixels while resolution determines how clear the detail in an
+                        image is based on density of the pixels.  </p>
+                </li>
+
+
+                <li>Extra Cedit: What are the similarities and differences between these image file formats? Why are some better
+                    than others for specific uses?  
+
+                    <ul>
+                        <li>GIF: Used for simple and small images and animations.  </li>
+
+                        <li>PNG: Used for higher image quality to support transparency but can be a large file size. It is often used
+                            when images need to be precise and clear as possible. Commonly used for logos and graphics with transparent backgrounds.</li>
+
+
+                        <li>JPG/JPEG: Used commonly for photos or still images but does not offer transparency like PNG and while it has a lower
+                            file size than PNG it can lower the quality of the image.</li>
+ 
+
+                        <li>WebP: Used for creating smaller file sizes while maintaining high quality of image or animation. It supports
+                            transparency and offers better compression than PNG or JPEG. </li>
+
+                        <li>SVG: Based on vector images and used for interface elements. </li> 
+
+
+                    </ul>
+
+                </li>
+
+            </ol>
+
+
+
+
+        </section>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
