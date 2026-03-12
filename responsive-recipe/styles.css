@@ -94,6 +94,10 @@ footer {
        
     }
 
+    h1 {
+            text-align: left;
+    }
+
     header img {
         width: 100%;
     }
