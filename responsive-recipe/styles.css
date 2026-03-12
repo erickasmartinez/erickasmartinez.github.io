@@ -91,6 +91,7 @@ footer {
         gap: 20px;
         align-items: center;
         text-align: left;
+       
     }
 
     header img {
@@ -115,7 +116,7 @@ footer {
 
     main {
     max-width:1200px;
-    margin:auto;
+    margin-left: 20px;
 }
 
     #title {
