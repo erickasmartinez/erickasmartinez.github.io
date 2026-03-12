@@ -101,14 +101,18 @@ main {
 grid-template-columns: repeat(6, calc(100%/6));
  grid-template-areas:
 
-        "title title img img img img"
-        "ingr ingr img img img img"
-        "ingr ingr img img img img"
+        "title title . . . ."
+        "ingr ingr . . . ."
+        "ingr ingr . . . ."
         "Dir Dir Dir Dir Tip Tip"
         "Dir Dir Dir Dir Tip Tip"
 
 
    
+}
+
+#title {
+    grid-area: title;
 }
 
 .image {
