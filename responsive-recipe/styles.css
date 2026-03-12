@@ -99,7 +99,7 @@ footer {
 
     main {
         display: grid;
-        grid-template-columns: repeat(6, calc(100%/6));
+        grid-template-columns: repeat(6, 1fr);
         grid-template-areas:
 
             "title title img img img img"
@@ -108,9 +108,15 @@ footer {
             "Dir Dir Dir Dir Tip Tip"
             "Dir Dir Dir Dir Tip Tip";
 
-
+        gap:20px;
+         
 
     }
+
+    main {
+    max-width:1200px;
+    margin:auto;
+}
 
     #title {
         grid-area: title;
@@ -118,6 +124,8 @@ footer {
 
     .image {
         grid-area: img;
+        width: 100%;
+        height: auto;
     }
 
     .ingredients {
