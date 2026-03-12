@@ -77,3 +77,54 @@ footer {
     font-size: 0.5rem;
 }
 
+
+
+/*  REST OF THE MOBILE BASELINE LAYOUT  */
+
+@media screen and (orientation: landscape) {
+
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+}
+
+header img {
+    width: 100%;
+}
+
+main {
+    display: grid;
+grid-template-columns: repeat(6, calc(100%/6));
+ grid-template-areas:
+
+        "title title img img img img"
+        "ingr ingr img img img img"
+        "ingr ingr img img img img"
+        "Dir Dir Dir Dir Tip Tip"
+        "Dir Dir Dir Dir Tip Tip"
+
+
+   
+}
+
+.image {
+    grid-area: img;
+}
+
+.ingredients{
+    grid-area: ingr;
+}
+
+.directions{
+    grid-area: Dir;
+}
+
+.tips{
+    grid-area: Tip;
+}
+
+}
