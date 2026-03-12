@@ -85,14 +85,10 @@ footer {
 @media screen and (orientation: landscape) {
 
 
-    header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        align-items: center;
-        text-align: left;
-       
-    }
+header {
+    padding: 20px;
+    text-align: left;
+}
 
     h1 {
             text-align: left;
