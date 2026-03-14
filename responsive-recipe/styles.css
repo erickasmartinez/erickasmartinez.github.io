@@ -83,62 +83,114 @@ footer {
 
 /*  REST OF THE MOBILE BASELINE LAYOUT  */
 
-@media screen and (orientation: landscape) {
+@media screen and (min-width:768px) 
+
+{ 
+
+
+main{ 
+
+    display:grid; 
+
+    grid-template-columns: repeat(6, 1fr); 
+
+    gap:30px; 
+
+    width:100%; 
+
+    padding:40px; 
+
+    grid-template-areas: 
+
+        "title title title image image image" 
+
+        "ingredients ingredients ingredients image image image" 
+
+        "directions directions directions directions tips tips"; 
+
+} 
+
+  
+
+#title{ 
+
+    grid-area:title; 
+
+    font-size:75px; 
+
+} 
+
+  
+
+.image{ 
+
+    grid-area:image; 
+
+    width:100%; 
+
+    height:100%; 
+
+    object-fit:cover; 
+
+} 
+
+  
+
+.ingredients{ 
+
+    grid-area:ingredients; 
+
+} 
+
+  
+
+.directions{ 
+
+    grid-area:directions; 
+
+} 
+
+  
+
+.tips{ 
+
+    grid-area:tips; 
+
+} 
+
+  
+
+section{ 
+
+    font-size:38px; 
+
+    line-height:2.0 ; 
+
+} 
+
+  
+
+h2{ 
+
+    font-size:50px; 
+
+} 
+
+  
+
+h3{ 
+
+    font-size:50px; 
+
+} 
+
+  
+
+} 
+
+  
 
 
 
+     
 
-
-    header img {
-        width: 100%;
-    }
-
-    body{
-        font-size: 20px;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas:
-
-            "title title img img img img"
-            "ingr ingr img img img img"
-            "ingr ingr img img img img"
-            "Dir Dir Dir Dir Tip Tip"
-            "Dir Dir Dir Dir Tip Tip";
-
-        gap:20px;
-        width: 100%;
-         
-
-    }
-
-    main {
-    max-width:1200px;
-    margin-left: 20px;
-}
-
-    #title {
-        grid-area: title;
-    }
-
-    .image {
-        grid-area: img;
-        width: 100%;
-        height: auto;
-    }
-
-    .ingredients {
-        grid-area: ingr;
-    }
-
-    .directions {
-        grid-area: Dir;
-    }
-
-    .tips {
-        grid-area: Tip;
-    }
-
-}
