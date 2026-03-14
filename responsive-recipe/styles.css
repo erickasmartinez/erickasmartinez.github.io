@@ -104,9 +104,9 @@ main{
 
         "title title title image image image" 
 
-        "ingr ingr ingr image image image" 
+        "ingredients ingredients ingredients image image image" 
 
-        "dir dir dir dir tips tips"; 
+        "directions directions directions directions tips tips"; 
 
 } 
 
@@ -138,7 +138,7 @@ main{
 
 .ingredients{ 
 
-    grid-area: ingr; 
+    grid-area: ingredients; 
 
 } 
 
@@ -146,7 +146,7 @@ main{
 
 .directions{ 
 
-    grid-area: dir; 
+    grid-area: directions; 
 
 } 
 
