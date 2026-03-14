@@ -110,21 +110,19 @@ main{
 
 } 
 
-  
 
 #title{ 
 
-    grid-area: title; 
+    grid-area:title; 
 
     font-size:75px; 
 
 } 
 
-  
 
 .image{ 
 
-    grid-area: image; 
+    grid-area:image; 
 
     width:100%; 
 
@@ -134,31 +132,23 @@ main{
 
 } 
 
-  
-
 .ingredients{ 
 
-    grid-area: ingredients; 
+    grid-area:ingredients; 
 
 } 
-
-  
 
 .directions{ 
 
-    grid-area: directions; 
+    grid-area:directions; 
 
 } 
-
-  
 
 .tips{ 
 
     grid-area:tips; 
 
 } 
-
-  
 
 section{ 
 
@@ -167,7 +157,7 @@ section{
     line-height:2.0 ; 
 
 } 
-
+  
 
 h2{ 
 
@@ -175,7 +165,10 @@ h2{
 
 } 
 
-  
+  ul, ol{
+    padding-left:40px;
+    margin-top:15px;
+}
 
 h3{ 
 
@@ -183,15 +176,15 @@ h3{
 
 } 
 
-  
-
 } 
 
-ul, ol{
-    padding-left:40px;
-    margin-top:15px;
-}
   
+
+
+
+     
+
+
 
 
 
