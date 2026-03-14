@@ -104,9 +104,9 @@ main{
 
         "title title title image image image" 
 
-        "ingredients ingredients ingredients image image image" 
+        "ingr ingr ingr image image image" 
 
-        "directions directions directions directions tips tips"; 
+        "dir dir dir dir tips tips"; 
 
 } 
 
@@ -114,7 +114,7 @@ main{
 
 #title{ 
 
-    grid-area:title; 
+    grid-area: title; 
 
     font-size:75px; 
 
@@ -124,7 +124,7 @@ main{
 
 .image{ 
 
-    grid-area:image; 
+    grid-area: image; 
 
     width:100%; 
 
@@ -138,7 +138,7 @@ main{
 
 .ingredients{ 
 
-    grid-area:ingredients; 
+    grid-area: ingr; 
 
 } 
 
@@ -146,7 +146,7 @@ main{
 
 .directions{ 
 
-    grid-area:directions; 
+    grid-area: dir; 
 
 } 
 
@@ -168,7 +168,6 @@ section{
 
 } 
 
-  
 
 h2{ 
 
@@ -188,6 +187,10 @@ h3{
 
 } 
 
+ul, ol{
+    padding-left:40px;
+    margin-top:15px;
+}
   
 
 
