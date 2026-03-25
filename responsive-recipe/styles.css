@@ -83,6 +83,8 @@ footer {
 
 /*  REST OF THE MOBILE BASELINE LAYOUT  */
 
+/*  REST OF THE MOBILE BASELINE LAYOUT  */
+
 @media screen and  (orientation: landscape)
 
 { 
@@ -98,8 +100,8 @@ main{
 
     width:100%; 
 
-    padding:40px; 
 
+ padding: 40px clamp(20px, 6vw, 100px);
     grid-template-areas: 
 
         "title title title image image image" 
@@ -115,9 +117,11 @@ main{
 
     grid-area:title; 
 
-    font-size:75px; 
+    font-size:150px; 
+    margin-top:30px;
 
 } 
+
 
 
 .image{ 
@@ -135,12 +139,14 @@ main{
 .ingredients{ 
 
     grid-area:ingredients; 
-
+     margin-top:30px;
+    margin-bottom:50px;
 } 
 
 .directions{ 
 
     grid-area:directions; 
+
 
 } 
 
@@ -152,27 +158,30 @@ main{
 
 section{ 
 
-    font-size:38px; 
+    font-size:50px; 
 
-    line-height:2.0 ; 
+    line-height:1.75 ; 
+    margin-bottom:10px;
 
 } 
   
 
 h2{ 
 
-    font-size:50px; 
+    font-size:80px; 
+    margin-bottom:15px;
 
 } 
 
   ul, ol{
-    padding-left:40px;
-    margin-top:15px;
+    padding-left:50px;
+    margin-top:20px;
+      
 }
 
 h3{ 
 
-    font-size:50px; 
+    font-size:70px; 
 
 } 
 
