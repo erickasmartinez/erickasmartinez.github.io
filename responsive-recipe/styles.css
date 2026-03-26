@@ -83,7 +83,6 @@ footer {
 
 /*  REST OF THE MOBILE BASELINE LAYOUT  */
 
-/*  REST OF THE MOBILE BASELINE LAYOUT  */
 
 @media screen and  (orientation: landscape)
 
@@ -113,7 +112,7 @@ main{
 } 
 
 
-#title{ 
+.title h1 { 
 
     grid-area:title; 
 
