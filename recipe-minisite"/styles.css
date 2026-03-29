@@ -86,6 +86,10 @@ nav li:hover a {
 
 /* DESKTOP */
 @media screen and (orientation: landscape) {
+
+        :root {
+        --nav-height: 8rem;
+    }
     #navBurger {
         display: none;
     }
@@ -178,7 +182,7 @@ main{
     grid-area:title; 
 }
 
-/* keep your big title style */
+
 .title h1 {
     font-size:150px; 
     margin-top:30px;
@@ -187,7 +191,7 @@ main{
 .image{ 
     grid-area:image; 
     width:100%; 
-    height:auto; /* FIXED */
+    height:auto; 
 } 
 
 .ingredients{ 
