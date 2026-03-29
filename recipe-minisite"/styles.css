@@ -157,57 +157,79 @@ footer {
 
 /* DESKTOP GRID LAYOUT */
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape)
+{ 
 
-main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    padding: 40px;
-    grid-template-areas:
-        "title title title image image image"
-        "ingredients ingredients ingredients image image image"
-        "directions directions directions tips tips tips";
+main{ 
+    display:grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap:30px; 
+    width:100%; 
+    padding: 40px clamp(20px, 6vw, 100px);
+
+    grid-template-areas: 
+        "title title title image image image" 
+        "ingredients ingredients ingredients image image image" 
+        "directions directions directions tips tips tips"; 
+} 
+
+/* FIXED */
+.title { 
+    grid-area:title; 
 }
 
+/* keep your big title style */
 .title h1 {
-    grid-area: title;
-    font-size: clamp(40px, 6vw, 80px);
+    font-size:150px; 
+    margin-top:30px;
 }
 
-.image {
-    grid-area: image;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.image{ 
+    grid-area:image; 
+    width:100%; 
+    height:auto; /* FIXED */
+} 
+
+.ingredients{ 
+    grid-area:ingredients; 
+    margin-top:30px;
+    margin-bottom:50px;
+} 
+
+.directions{ 
+    grid-area:directions; 
+    width:80%; 
+} 
+
+.tips{ 
+    grid-area:tips; 
+} 
+
+section{ 
+    font-size:60px; 
+    line-height:1.75; 
+    margin-bottom:10px;
+    width:100%;
+} 
+
+h2{ 
+    font-size:80px; 
+    margin-bottom:15px;
+} 
+
+ul, ol{
+    padding-left:60px;
+    margin-top:20px;
 }
 
-.ingredients {
-    grid-area: ingredients;
-}
+h3{ 
+    font-size:70px; 
+    margin-top:20px;
+} 
 
-.directions {
-    grid-area: directions;
-}
+footer{
+    font-size:3.0rem;
+    margin-top:20px;
+}    
 
-.tips {
-    grid-area: tips;
-}
-
-section {
-    width: 100%;
-    font-size: 18px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 22px;
-}
-
-footer {
-    font-size: 1rem;
-}
 }
