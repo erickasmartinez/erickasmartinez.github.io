@@ -1,5 +1,6 @@
-/*CSS for responsive menu*/
-/*variables*/
+/*  NAV MENU  */
+
+/* define variables */
 :root {
     --nav-height: 3rem;
     --nav-bkgd-color: gray;
@@ -10,15 +11,20 @@
 
 * {
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     padding: var(--nav-height) 0 0 0;
+    font-size: 12px;
 }
 
+/* NAV BAR */
 nav {
-    position: absolute;
+    position: fixed; /* changed from absolute */
     top: 0;
     left: 0;
     width: 100%;
@@ -27,69 +33,25 @@ nav {
 }
 
 #navBurger {
-    position: relative;
     display: block;
     font-size: 2rem;
     color: var(--nav-text-color);
-    padding: 0.1em 0 0 0.3em;
-    max-height: 2rem;
+    padding-left: 0.3em;
 }
 
 nav ul {
-    position: relative;
     background-color: var(--nav-bkgd-color);
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-nav>ul {
+nav > ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 
-nav.clicked>ul {
+nav.clicked > ul {
     max-height: 90vh;
-}
-
-nav>ul>li {
-    position: relative;
-    background-color: var(--nav-bkgd-color);
-    display: block;
-    margin: 1rem;
-}
-
-nav>ul>li>a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-}
-
-nav>ul>li>a::after {
-    position: absolute;
-    content: "⌄";
-    right: 0.3rem;
-    top: 0.2rem;
-    color: inherit;
-    font-size: 110%;
-}
-
-nav>ul>li>ul {
-    margin: 0 0 0 1rem;
-    background-color: inherit;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
-
-nav>ul>li.clicked>ul {
-    max-height: 90vh;
-}
-
-nav>ul>li>ul>li {
-    padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 nav a {
@@ -97,126 +59,89 @@ nav a {
     color: var(--nav-text-color);
 }
 
-nav>ul>li>ul>li:hover {
+/* dropdown */
+nav > ul > li {
+    margin: 1rem;
+}
+
+nav > ul > li > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+nav > ul > li.clicked > ul {
+    max-height: 90vh;
+}
+
+/* hover */
+nav li:hover {
     background-color: var(--nav-hover-bkgd-color);
 }
 
-nav>ul>li>ul>li:hover a {
+nav li:hover a {
     color: var(--nav-hover-text-color);
 }
 
 
-/* ----- MEDIA QUERY for landscape/desktop layout ----- */
+/* DESKTOP */
 @media screen and (orientation: landscape) {
-
     #navBurger {
         display: none;
     }
 
-    nav>ul {
+    nav > ul {
         overflow: visible;
     }
 
-    nav>ul>li {
+    nav > ul > li {
         float: left;
         margin: 0.5rem;
     }
 
-    nav>ul>li a {
-        padding-right: 0.5rem;
-        margin: 0;
-    }
-
-    nav>ul>li>ul {
-        margin: 0 0.5rem 0.5rem 0;
-        visibility: hidden;
+    nav > ul > li > ul {
         position: absolute;
+        visibility: hidden;
     }
 
-    nav>ul>li.clicked>ul {
-        display: block;
+    nav > ul > li.clicked > ul {
         visibility: visible;
     }
-
-    nav>ul>li>ul li {
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    nav>ul>li>a::after {
-        content: "";
-    }
-
-}
-
-/* mobile-first design for responsive recipe layout */
-
-* {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 
-body {
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-     
-    
+
+
+/*RECIPE STYLE*/
+
+main {
+    padding: 20px;
 }
 
-
- h1 {
+h1 {
     font-size: 20px;
     margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 1.2;
 }
 
 img {
     width: 60%;
-    height: auto;
-    margin: 15px 0;
+    margin: 15px auto;
     display: block;
 }
 
-
-main {
-    padding: 20px;
-
-}
-
 section {
-    margin-bottom:30px;
-    margin-top: 30px;
-     width: 60%;
-
+    margin: 30px auto;
+    width: 90%;
 }
 
-h2 {
-    margin-bottom: 10px;
+h2, h3 {
     font-size: 14px;
-    line-height: 1.2;
-    font-weight: bold;
-
-}
-
-h3 {
     margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: bold;
-
 }
 
-ul,
-ol {
-
+ul, ol {
     padding-left: 15px;
     margin-top: 15px;
-
 }
 
 li {
@@ -224,10 +149,65 @@ li {
 }
 
 footer {
-
     padding: 15px;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 
 
+/* DESKTOP GRID LAYOUT */
+
+@media screen and (orientation: landscape) {
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    padding: 40px;
+    grid-template-areas:
+        "title title title image image image"
+        "ingredients ingredients ingredients image image image"
+        "directions directions directions tips tips tips";
+}
+
+.title h1 {
+    grid-area: title;
+    font-size: clamp(40px, 6vw, 80px);
+}
+
+.image {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ingredients {
+    grid-area: ingredients;
+}
+
+.directions {
+    grid-area: directions;
+}
+
+.tips {
+    grid-area: tips;
+}
+
+section {
+    width: 100%;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+footer {
+    font-size: 1rem;
+}
+}
