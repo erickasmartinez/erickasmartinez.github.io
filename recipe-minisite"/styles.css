@@ -244,3 +244,62 @@ footer{
 }    
 
 }
+
+/* INTRO SECTION - MOBILE  */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.intro img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.intro-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1rem;
+}
+
+/*INTRO SECTION LANDSCAPE*/
+
+@media screen and (orientation: landscape) {
+   
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+    padding: 40px clamp(20px, 6vw, 100px);
+}
+
+.intro img {
+    width: 50%;
+    height: auto;
+}
+
+.intro-text {
+    width: 50%;
+}
+
+.intro-text h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 2rem;
+}
+
+}
