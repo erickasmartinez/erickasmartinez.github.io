@@ -24,7 +24,7 @@ body {
 
 /* NAV BAR */
 nav {
-    position: fixed; /* changed from absolute */
+    position: absolute; /* changed from absolute */
     top: 0;
     left: 0;
     width: 100%;
