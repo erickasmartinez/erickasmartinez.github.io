@@ -184,7 +184,7 @@ main{
         "directions directions directions tips tips tips"; 
 } 
 
-/* FIXED */
+
 .title { 
     grid-area:title; 
 }
@@ -245,8 +245,8 @@ footer{
 
 }
 
-/* INTRO SECTION - MOBILE  */
-.intro {
+/* INTRO MOBILE  */
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,50 +255,50 @@ footer{
     gap: 20px;
 }
 
-.intro img {
+.home img {
     width: 100%;
     max-width: 400px;
     height: auto;
    
 }
 
-.intro-text h1 {
+.home-text h1 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.intro-text p {
+.home-text p {
     font-size: 1rem;
 }
 
-/*INTRO SECTION LANDSCAPE*/
+/*INTRO LANDSCAPE*/
 
 @media screen and (orientation: landscape) {
    
-.intro {
+.home {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
     gap: 40px;
-    padding: 40px clamp(20px, 6vw, 100px);
+ 
 }
 
-.intro img {
-    width: 50%;
+.home img {
+    width: 100%;
     height: auto;
 }
 
-.intro-text {
+.home-text {
     width: 50%;
 }
 
-.intro-text h1 {
+.home-text h1 {
     font-size: 5rem;
     margin-bottom: 20px;
 }
 
-.intro-text p {
+.home-text p {
     font-size: 2rem;
 }
 
