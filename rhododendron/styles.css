@@ -102,15 +102,22 @@ header {
   }
 
 #mainBlock h1 {
-    font-size: 4em;
+    font-size: 4.5em;
     margin-left: 0.5em;
 
 }
 
 #mainBlock li {
-font-size: 3em ;
-padding-left: .5em;
+font-size: 4em ;
+padding-left: .2em;
+   line-height: 1.5em;
+    margin-top:.5em;
+
 }
    
-    
+#mainBlock ol {
+    padding-left: 5em; 
+}
+
+
 }
