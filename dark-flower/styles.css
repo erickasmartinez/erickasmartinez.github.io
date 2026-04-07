@@ -1,0 +1,123 @@
+/* mobile-first design for Pacific Rhododendron layout */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+#RhododendronPicture {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Pacific\ Rhododendron\ 1\ -\ Walter\ Siegmund.jpeg");
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#RhododendronTitle {
+
+    width: 100vw;
+}
+
+#RhododendronTitle h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    color: white;
+    font-size: 2.5em;
+    width: calc(100vw - 2em);
+  
+}
+
+#block1 { background-color: rgb(228, 89, 175); }
+#block2 { background-color: rgb(196, 99, 177); }
+#block3 { background-color: rgb(215, 136, 185); }
+#block4 {background-color: pink; }
+
+#mainBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainBlock div {
+  flex-grow: 1;
+  padding: 1em;
+}
+
+
+
+
+/*  REST OF THE MOBILE BASELINE LAYOUT  */
+
+
+@media screen and (orientation: landscape) {
+
+    header {
+         height: 100vh;
+    }
+       
+    
+    #RhododendronPicture {
+        width: 50vw;
+       
+    }
+
+    #RhododendronTitle {
+        width: 50vw;
+        height: 100vh;
+        left: 50vw;
+        background-color: #333;
+        position: absolute;
+        font-size: 3.5em;
+    }
+
+    #RhododendronTitle h1 {
+        width: 45vw;
+     position: static;
+        margin-bottom: 1em;
+        padding-left: .5em;
+    }
+
+    #mainBlock {
+    position: absolute;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    padding: 20em 2em 2em 2em;
+
+  }
+
+#mainBlock h1 {
+    font-size: 4.5em;
+    margin-left: 0.5em;
+
+}
+
+#mainBlock li {
+font-size: 4em ;
+padding-left: .2em;
+   line-height: 1.5em;
+    margin-top:.5em;
+
+}
+   
+#mainBlock ol {
+    padding-left: 5em; 
+}
+
+
+}
