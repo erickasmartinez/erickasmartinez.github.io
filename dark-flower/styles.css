@@ -150,10 +150,10 @@ padding-left: .2em;
     background-color: #111;
 }
 
-.darkMode #block1 { background-color: #8a2a6b; }
-.darkMode #block2 { background-color: #6f2c66; }
-.darkMode #block3 { background-color: #7a3d6c; }
-.darkMode #block4 { background-color: #5a2c4d; }
+.darkMode #block1 { background-color: rgb(96, 29, 73); }
+.darkMode #block2 { background-color: rgb(98, 39, 90); }
+.darkMode #block3 { background-color: rgb(88, 45, 78); }
+.darkMode #block4 { background-color: rgb(64, 31, 55); }
 
 
 .darkMode h1,
