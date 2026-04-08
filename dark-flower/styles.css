@@ -71,7 +71,7 @@ header {
     cursor: pointer;
     z-index: 1000;    
 }
-/*  REST OF THE MOBILE BASELINE LAYOUT  */
+
 
 
 @media screen and (orientation: landscape) {
@@ -141,7 +141,7 @@ padding-left: .2em;
     color: white;
 }
 
-/* header overlay in landscape */
+
 .darkMode #RhododendronTitle {
     background-color: #111;
 }
