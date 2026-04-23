@@ -1,71 +1,238 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<!-- meta tags and title -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A k-besuty Skincare Guide</title>
 
-	<!-- external and internal CSS -->
-	<link rel="stylesheet" href="styles.css" media="all">
-	<style>
-		/* in-file CSS here */
-	</style>
+<style>
 
-	<!-- external and internal JavaScript -->
-	<script src="scripts.js" defer></script>
-	<script>
-		// in-page JavaScript here
-	</script>
 
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+nav {
+    background: #333;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #444;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 0;
+    min-width: 160px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li:hover {
+    background: #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+main {
+    background: #222;
+    color: white;
+    height: 85vh;
+    position: relative;
+}
+
+
+.side-text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.big-box {
+    width: 250px;
+    height: 320px;
+    background: white;
+}
+
+/* Title */
+.title {
+    margin-top: 10px;
+    background: white;
+    color: black;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+/* Small labels */
+.label {
+    position: absolute;
+    background: gray;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.label-left {
+    left: -140px;
+    top: 40%;
+}
+
+.label-right {
+    right: -140px;
+    top: 55%;
+}
+
+/* Skin cards */
+.skin-section {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-    <div>Home</div>
-    <nav>
-        <ul class="menu">
-        <li>Home</li>
-
-    <li class="dropdown">
-        <ul class="dropdown-menu">
-            Routine Basics
-        <li>Building a Routine</li>
-        <li>Common Mistakes</li>
-
-        </ul>
-    </li>
-
-    <li class="dropdown">
-        Skin Types
-        <ul class="dropdown-menu">
-        <li>Dry Skin + Routine</li>
-        <li>Oily Skin + Routine</li>
-        <li>Combination Skin + Routine</li>
-        <li>Sensitive Skin + Routine</li>
-
-        </ul>
-    </li>
-    
-    <li class="dropdown">
-         Products and Resources 
-        <ul class="dropdown-menu">
-            <li>Product Highlights</li>
-            <li>Where to Buy</li>
-            <li>Useful Links</li>
-
-        </ul>
-    </li>
-
-     
-
-        </ul>
-    </nav>
+    <h1>Building a K-Beauty Skincare Routine</h1>
+    <p>Beginner friendly routine for your skin type</p>
 </header>
 
+<nav>
+    <ul class="menu">
 
+        <li>Home</li>
+
+        <li class="dropdown">
+            Routine Basics
+            <ul class="dropdown-menu">
+                <li>Building a Routine</li>
+                <li>Common Mistakes</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            Skin Types
+            <ul class="dropdown-menu">
+                <li>Dry Skin</li>
+                <li>Oily Skin</li>
+                <li>Combination Skin</li>
+                <li>Sensitive Skin</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            Products
+            <ul class="dropdown-menu">
+                <li>Highlights</li>
+                <li>Where to Buy</li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+
+<main>
+
+
+    <div class="side-text">
+        Defining your skin type for your perfect routine
+    </div>
+
+  
+    <div class="center">
+
+        <div class="big-box"></div>
+
+        <div class="title">Title</div>
+
+        <div class="label label-left">Steps to a Routine</div>
+        <div class="label label-right">Find Your Skin Type</div>
+
+    </div>
+
+  
+    <div class="skin-section">
+        <div class="card">Oily Skin</div>
+        <div class="card">Dry Skin</div>
+    </div>
+
+</main>
+
+<footer>
+    DTC Major Project
+</footer>
 
 </body>
 </html>
