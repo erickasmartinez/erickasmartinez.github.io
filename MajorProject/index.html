@@ -12,80 +12,87 @@
             font-family: Arial, sans-serif;
         }
 
-
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #111;
-            padding: 10px 20px;
-            color: white;
-        }
-
-        header {
-            background: transparent;
-            color: white;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 22px;
-        }
-
-        header p {
-            margin: 5px 0 0 0;
-            font-size: 14px;
-            color: #ccc;
-        }
-
- 
+     
         nav {
-            background: transparent;
+            background: #111;
+            display: flex;
+            justify-content: flex-end;
+           
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
         }
 
-        .menu {
-            display: flex;
-            gap: 20px;
+       
+        #navBurger {
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+       
+        nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
         }
 
-        .menu li {
+        nav ul li {
             position: relative;
-            color: white;
         }
 
-        .menu a {
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
             color: white;
             text-decoration: none;
         }
 
-   
-        .dropdown-menu {
+        nav ul li a:hover {
+            background: #333;
+        }
+
+        
+        nav ul li ul {
             display: none;
             position: absolute;
+            top: 100%;
+            right: 0;
+         
             background: white;
+            min-width: 180px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav ul li ul li a {
             color: black;
             padding: 10px;
-            list-style: none;
-            margin: 0;
-            top: 100%;
-            left: 0;
-            min-width: 180px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .dropdown-menu li {
-            padding: 5px 0;
-        }
-
-        .dropdown-menu li:hover {
+        nav ul li ul li a:hover {
             background: #eee;
         }
 
-        .dropdown:hover .dropdown-menu {
+   
+        nav ul li:hover ul {
             display: block;
+        }
+
+     
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+      
+        main {
+            padding: 20px;
         }
 
         footer {
@@ -99,52 +106,55 @@
 
 <body>
 
-  
-    <div class="top-bar">
+    <nav>
 
-        <header>
-            <h1>Building a K-Beauty Skincare Routine</h1>
-            <p>Beginner friendly routine for your skin type</p>
-        </header>
+     
+        <a id="navBurger">&#9776;</a>
 
-        <nav>
-            <ul class="menu">
+        <ul>
 
-                <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
 
-                <li class="dropdown">
-                    <a href="#">Routine Basics</a>
-                    <ul class="dropdown-menu">
-                        <li>Building a Routine</li>
-                        <li>Common Mistakes</li>
-                    </ul>
-                </li>
+            <li>
+                <a href="#">Routine Basics</a>
+                <ul>
+                    <li><a href="#">Building a Routine</a></li>
+                    <li><a href="#">Common Mistakes</a></li>
+                </ul>
+            </li>
 
-                <li class="dropdown">
-                    <a href="#">Skin Types</a>
-                    <ul class="dropdown-menu">
-                        <li>Dry Skin + Routine</li>
-                        <li>Oily Skin + Routine</li>
-                        <li>Combination Skin + Routine</li>
-                        <li>Sensitive Skin + Routine</li>
-                    </ul>
-                </li>
+            <li>
+                <a href="#">Skin Types</a>
+                <ul>
+                    <li><a href="#">Dry Skin + Routine</a></li>
+                    <li><a href="#">Oily Skin + Routine</a></li>
+                    <li><a href="#">Combination Skin + Routine</a></li>
+                    <li><a href="#">Sensitive Skin + Routine</a></li>
+                </ul>
+            </li>
 
-                <li class="dropdown">
-                    <a href="#">Products & Resources</a>
-                    <ul class="dropdown-menu">
-                        <li>Product Highlights</li>
-                        <li>Where to Buy</li>
-                        <li>Useful Links and Information</li>
-                    </ul>
-                </li>
+            <li>
+                <a href="#">Products & Resources</a>
+                <ul>
+                    <li><a href="#">Product Highlights</a></li>
+                    <li><a href="#">Where to Buy</a></li>
+                    <li><a href="#">Useful Links and more Information</a></li>
+                </ul>
+            </li>
 
-            </ul>
-        </nav>
+        </ul>
 
-    </div>
+    </nav>
 
-  
+    <header>
+        <h1>Building a K-Beauty Skincare Routine</h1>
+        <p>A Beginner friendly routine based on your skin type</p>
+    </header>
+
+    <main>
+        <p>randommmmm</p>
+    </main>
+
     <footer>
         DTC Major Project
     </footer>
