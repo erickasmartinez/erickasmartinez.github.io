@@ -95,4 +95,18 @@
             transform: rotate(-90deg);
         }
 
+        .about {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 40px 20px;
+
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+
+        }
+
+
       
