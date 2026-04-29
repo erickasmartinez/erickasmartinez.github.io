@@ -113,7 +113,7 @@
            border: 2px solid #ead4f0;
            padding: 10px;
            background-color: #f9f9f9;
-          
+
        }
 
 
@@ -124,14 +124,12 @@
        }
 
 
-       .placeholder {
+       .box img {
+           width: 100%;
            height: 150px;
-           background-color: #ddd;
-           display: flex;
-           align-items: center;
-           justify-content: center;
+           object-fit: cover;
+           object-position: 80% center;
        }
-
 
        .box:hover {
            background-color: #0c0c0c;
@@ -150,11 +148,11 @@
            gap: 20px;
            padding-top: 20px;
            padding-bottom: 20px;
-       
+
        }
 
-       
-       
+
+
        .Buttons a {
            background-color: #e7cfea;
            color: #151516;
@@ -163,7 +161,7 @@
            margin: 10px;
 
            display: inline-block;
-           text-decoration:none;
+           text-decoration: none;
 
            border-radius: 5px;
            font-weight: 700;
