@@ -7,7 +7,7 @@
        nav {
            background: #111;
            display: flex;
-           justify-content: flex-end;
+           justify-content: space-between;
 
            align-items: center;
            padding: 10px 20px;
@@ -19,7 +19,7 @@
            font-size: 26px;
            color: white;
            cursor: pointer;
-           margin-right: 15px;
+           display: none;
        }
 
 
@@ -28,6 +28,7 @@
            margin: 0;
            padding: 0;
            display: flex;
+            gap: 25px;
        }
 
        nav ul li {
