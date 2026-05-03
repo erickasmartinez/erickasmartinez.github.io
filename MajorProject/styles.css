@@ -1,8 +1,17 @@
-
 :root {
   --nav-height: 3rem;
   --nav-bkgd-color: #111;
   --nav-text-color: white;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 
@@ -20,7 +29,7 @@ nav {
   font-size: 26px;
   color: white;
   cursor: pointer;
-  display: none; 
+  display: block;
 }
 
 
@@ -28,19 +37,31 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: #111;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+
+nav.clicked ul {
   display: flex;
-  gap: 25px;
 }
 
 
 nav ul li {
   position: relative;
+  border-top: 1px solid #333;
 }
 
 
 nav ul li a {
   display: block;
-  padding: 10px 15px;
+  padding: 15px;
   color: white;
   text-decoration: none;
 }
@@ -55,13 +76,8 @@ nav ul li ul {
   margin: 0;
   padding: 0;
 
-  position: absolute;
-  top: 100%;
-  right: 0;
-
+  position: static;
   background: #222;
-  min-width: 180px;
-
 
   max-height: 0;
   overflow: hidden;
@@ -75,159 +91,142 @@ nav ul li.clicked ul {
 
 
 nav ul li ul li a {
+  padding-left: 30px;
+}
+
+
+
+@media (orientation: landscape) {
+
+
+  #navBurger {
+    display: none;
+  }
+
+ 
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    gap: 25px;
+  }
+
+  nav ul li {
+    border: none;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+  }
+
+ 
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222;
+
+    display: none;
+    max-height: none;
+  }
+
+
+  nav ul li:hover ul {
+    display: block;
+  }
+}
+
+
+header {
+  text-align: center;
+  padding: 40px;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.Main-Photo img {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(-90deg);
+}
+
+
+.about {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+
+.box {
+  border: 2px solid #ead4f0;
   padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.box h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #060606;
+}
+
+.box img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  object-position: 80% center;
+}
+
+.box:hover {
+  background-color: #0c0c0c;
+  color: white;
+}
+
+.box:hover h3 {
   color: white;
 }
 
 
 
-@media (max-width: 768px) {
-
-  #navBurger {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    gap: 0;
-  }
 
 
-
-  nav.clicked ul {
-    display: flex;
-  }
-
-  nav ul li {
-    border-top: 1px solid #333;
-  }
-
-  nav ul li a {
-    padding: 15px;
-  }
-
-
-  nav ul li ul {
-    position: static;
-    background: #222;
-
-    max-height: 0;
-    overflow: hidden;
-  
-  }
-
-  nav ul li.clicked ul {
-    max-height: 500px;
-  }
+.Buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.Buttons a {
+  background-color: #e7cfea;
+  color: #151516;
 
-@media (min-width: 769px) {
+  padding: 12px 20px;
+  margin: 10px;
 
-  nav ul li:hover ul {
-    max-height: 500px;
-  }
+  display: inline-block;
+  text-decoration: none;
+
+  border-radius: 5px;
+  font-weight: 700;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
- 
-       
-       header {
-           text-align: center;
-           padding: 40px;
-       }
-
-       main {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: auto
-       }
-
-       .Main-Photo img {
-           max-width: 100%;
-           height: auto;
-           transform: rotate(-90deg);
-       }
-
-       .about {
-           background-color: #f4f4f4;
-           color: #333;
-           padding: 40px 20px;
-         text-align: center;
-
-       }
-
-       .about h2 {
-           font-size: 24px;
-           margin-bottom: 15px;
-
-       }
-
-
-
-       .box {
-           border: 2px solid #ead4f0;
-           padding: 10px;
-           background-color: #f9f9f9;
-
-       }
-
-
-       .box h3 {
-           margin: 10px 0;
-           font-size: 20px;
-           color: #060606;
-       }
-
-
-       .box img {
-           width: 100%;
-           height: 150px;
-           object-fit: cover;
-           object-position: 80% center;
-       }
-
-       .box:hover {
-           background-color: #0c0c0c;
-           color: white;
-       }
-
-       .box:hover h3 {
-           color: white;
-       }
-
-
-       .Buttons {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           gap: 20px;
-           padding-top: 20px;
-           padding-bottom: 20px;
-
-       }
-
-
-
-       .Buttons a {
-           background-color: #e7cfea;
-           color: #151516;
-
-           padding: 12px 20px;
-           margin: 10px;
-
-           display: inline-block;
-           text-decoration: none;
-
-           border-radius: 5px;
-           font-weight: 700;
-
-           border: none;
-           cursor: pointer;
-           text-align: center;
-       }
