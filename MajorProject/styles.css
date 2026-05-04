@@ -17,7 +17,7 @@ body {
 header {
   text-align: center;
   padding: 40px;
-  font-size: 20px; /* mobile default */
+  font-size: 20px; 
 }
 
 nav {
@@ -173,9 +173,17 @@ main {
 
 .box {
   border: 2px solid #ead4f0;
-  padding: 10px;
+  padding: 10px; 
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;
+
+
 }
+
+
 
 .box h3 {
   margin: 10px 0;
@@ -184,7 +192,7 @@ main {
 }
 
 .box img {
-  width: 80%;
+  width: 75%;
   height: auto;
   object-fit: cover;
   object-position: 80% center;
@@ -224,7 +232,6 @@ main {
 
   border-radius: 5px;
   font-weight: 700;
-
   border: none;
   cursor: pointer;
   text-align: center;
