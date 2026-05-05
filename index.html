@@ -91,22 +91,25 @@
         display: none;
     }
 
-   
-    nav.clicked ul,
-    nav ul {
-        display: flex ;
+
+    nav {
+        height: auto;
     }
 
     nav ul {
+        display: flex !;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
         list-style: none;
+
+     
         max-height: none ;
         overflow: visible ;
     }
 
+   
     nav > ul > li {
         position: relative;
         margin: 0 10px;
@@ -114,22 +117,23 @@
 
     nav > ul > li > a {
         display: inline-block;
-        padding: 12px 18px;
+        padding: 12px 16px;
         white-space: nowrap;
     }
 
- 
+    
     nav > ul > li > ul {
-        display: none;
         position: absolute;
         top: 100%;
         left: 0;
+
         background: #1f2933;
         min-width: 180px;
-        z-index: 10;
+
+        display: none;
     }
 
-   
+  
     nav > ul > li.clicked > ul {
         display: block;
     }
