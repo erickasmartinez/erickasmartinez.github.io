@@ -9,7 +9,7 @@
 	<title>Erica's website</title>
 
 	<!-- external and internal CSS -->
-	
+
 	<style>
 		* {
 			box-sizing: border-box;
@@ -65,7 +65,7 @@
 
 		nav.clicked ul {
 			display: flex;
-			
+
 		}
 
 		nav ul li {
@@ -82,11 +82,51 @@
 			text-decoration: none;
 			text-align: center;
 		}
+
+		@media (orientation: landscape) {
+
+			
+			#navBurger {
+				display: none;
+			}
+
+			
+			nav ul {
+				display: flex ;
+				flex-direction: row;
+				justify-content: center;
+				gap: 10px;
+			}
+
+			nav ul li a {
+				margin: 0;
+			}
+
+			
+			nav ul li {
+				position: relative;
+			}
+
+			nav ul li ul {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background: #1f2933;
+				padding: 5px;
+				border-radius: 6px;
+				min-width: 180px;
+			}
+
+			nav ul li ul li a {
+				margin: 0;
+			}
+
+		}
 	</style>
 
 
 	<!-- external and internal JavaScript -->
-	
+
 	<script>
 		// function to hide/show menu items 
 		function clickNav(bodyClicked) {
