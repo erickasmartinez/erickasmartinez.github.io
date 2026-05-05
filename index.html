@@ -83,58 +83,54 @@
 			text-align: center;
 		}
 
-@media screen and (orientation: landscape) {
 
-    :root {
-        --nav-height: 5rem;
-    }
+
+@media screen and (orientation: landscape) {
 
     #navBurger {
         display: none;
     }
 
-   
-    nav > ul {
-        max-height: none ;
-        overflow: visible ;
+    nav {
+        width: 100%;
+    }
 
-        display: flex;
+    nav > ul {
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 10px;
 
-        background-color: var(--nav-bkgd-color);
+        max-height: none;
+        overflow: visible;
     }
 
-    
     nav > ul > li {
-        margin: 0 1rem;
         position: relative;
+        margin: 0;
     }
 
     nav > ul > li > a {
         display: inline-block;
-        padding: 1rem 1.5rem;
+        padding: 12px 18px;
         white-space: nowrap;
     }
 
-    
+   
     nav > ul > li > ul {
         position: absolute;
         top: 100%;
         left: 0;
 
-        background-color: var(--nav-bkgd-color);
+        background: #1f2933;
         min-width: 180px;
+
+        display: none;
     }
 
-    nav > ul > li > ul > li {
-        margin: 0;
-    }
-
-    nav > ul > li > ul > li a {
+    nav > ul > li.clicked > ul {
         display: block;
-        padding: 0.8rem;
     }
 }
 	</style>
@@ -199,17 +195,17 @@
 
 <body>
 
-	<nav>
-		<a id="navBurger">&#9776;</a>
+	<h1>Erica</h1>
+  <p>Strongly willed student driven by purpose and matcha ice cream</p>
 
-		<h1>Erica</h1>
-		<p>Strongly willed student driven by purpose and matcha ice cream</p>
+  <p>
+    <a href="https://github.com/erickasmartinez/erickasmartinez.github.io">
+      GitHub Repository
+    </a>
+  </p>
 
-		<p>
-			<a href="https://github.com/erickasmartinez/erickasmartinez.github.io">
-				GitHub Repository
-			</a>
-		</p>
+  <nav>
+    <a id="navBurger">&#9776;</a>
 
 
 		<ul>
