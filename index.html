@@ -11,7 +11,77 @@
 	<!-- external and internal CSS -->
 	<link rel="stylesheet" href="styles.css" media="all">
 	<style>
-		/* in-file CSS here */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background: #f4f6f8;
+			color: #222;
+			padding: 15px;
+			line-height: 1.6;
+		}
+
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		p {
+			text-align: center;
+			margin: 10px 0;
+		}
+
+
+		a {
+			color: #2b7cff;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		#navBurger {
+			display: block;
+			font-size: 30px;
+			text-align: center;
+			padding: 10px;
+			background: #1f2933;
+			color: white;
+			border-radius: 6px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+
+		nav ul {
+			list-style: none;
+			display: none;
+			flex-direction: column;
+		}
+
+		nav.clicked ul {
+			display: flex;
+			
+		}
+
+		nav ul li {
+			position: relative;
+		}
+
+		nav ul li a {
+			display: block;
+			background: #1f2933;
+			color: white;
+			padding: 10px;
+			margin: 5px 0;
+			border-radius: 6px;
+			text-decoration: none;
+			text-align: center;
+		}
 	</style>
 
 
