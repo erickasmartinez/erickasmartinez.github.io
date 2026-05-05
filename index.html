@@ -90,28 +90,38 @@
 				display: none;
 			}
 
-			
+		
 			nav ul {
-				display: flex ;
+				display: flex !important;
 				flex-direction: row;
 				justify-content: center;
 				align-items: center;
-				gap: 15px;
+				gap: 10px;
+
+				margin: 0;
+				padding: 0;
 			}
 
 			
 			nav ul li a {
+				display: inline-block;
+				
+				width: auto;
 				margin: 0;
 				padding: 10px 15px;
+				white-space: nowrap;
+			}
+
+			
+			nav ul li {
+				position: relative;
 			}
 
 			
 			nav ul li ul {
 				display: none ;
-				position: absolute;
 			}
 
-			
 			nav ul li:hover ul {
 				display: block;
 				position: absolute;
@@ -121,10 +131,7 @@
 				padding: 8px;
 				border-radius: 6px;
 				min-width: 180px;
-			}
-
-			nav ul li {
-				position: relative;
+				z-index: 10;
 			}
 
 			
