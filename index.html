@@ -95,32 +95,43 @@
 				display: flex ;
 				flex-direction: row;
 				justify-content: center;
-				gap: 10px;
-			}
-
-			nav ul li a {
-				margin: 0;
+				align-items: center;
+				gap: 15px;
 			}
 
 			
-			nav ul li {
-				position: relative;
+			nav ul li a {
+				margin: 0;
+				padding: 10px 15px;
 			}
 
+			
 			nav ul li ul {
+				display: none ;
+				position: absolute;
+			}
+
+			
+			nav ul li:hover ul {
+				display: block;
 				position: absolute;
 				top: 100%;
 				left: 0;
 				background: #1f2933;
-				padding: 5px;
+				padding: 8px;
 				border-radius: 6px;
 				min-width: 180px;
 			}
 
-			nav ul li ul li a {
-				margin: 0;
+			nav ul li {
+				position: relative;
 			}
 
+			
+			body {
+				max-width: 1000px;
+				margin: auto;
+			}
 		}
 	</style>
 
@@ -184,55 +195,55 @@
 
 <body>
 
-<nav>
-	<a id="navBurger">&#9776;</a>
+	<nav>
+		<a id="navBurger">&#9776;</a>
 
-	<h1>Erica</h1>
-	<p>Strongly willed student driven by purpose and matcha ice cream</p>
+		<h1>Erica</h1>
+		<p>Strongly willed student driven by purpose and matcha ice cream</p>
 
-	<p>
-		<a href="https://github.com/erickasmartinez/erickasmartinez.github.io">
-			GitHub Repository
-		</a>
-	</p>
+		<p>
+			<a href="https://github.com/erickasmartinez/erickasmartinez.github.io">
+				GitHub Repository
+			</a>
+		</p>
 
 
-	<ul>
-		<li><a href="index.html">Home</a></li>
+		<ul>
+			<li><a href="index.html">Home</a></li>
 
-		<li>
-			<a href="#">Activities</a>
-			<ul>
-				<li><a href="/codelogs/log1.html">Code Log 1</a></li>
-				<li><a href="/codelogs/log2.html">Code Log 2</a></li>
-				<li><a href="/codelogs/log3.html">Code Log 3</a></li>
-				<li><a href="/codelogs/log4.html">Code Log 4</a></li>
-				<li><a href="/codelogs/log5.html">Code Log 5</a></li>
-				<li><a href="/codelogs/log6.html">Code Log 6</a></li>
-			</ul>
-		</li>
+			<li>
+				<a href="#">Activities</a>
+				<ul>
+					<li><a href="/codelogs/log1.html">Code Log 1</a></li>
+					<li><a href="/codelogs/log2.html">Code Log 2</a></li>
+					<li><a href="/codelogs/log3.html">Code Log 3</a></li>
+					<li><a href="/codelogs/log4.html">Code Log 4</a></li>
+					<li><a href="/codelogs/log5.html">Code Log 5</a></li>
+					<li><a href="/codelogs/log6.html">Code Log 6</a></li>
+				</ul>
+			</li>
 
-		<li>
-			<a href="#">Tiny Projects</a>
-			<ul>
-				<li><a href="/favorite-recipe/index.html">Favorite Recipe</a></li>
-				<li><a href="/anni-albers/index.html">Design Quote Layout 1</a></li>
-				<li><a href="/anni-albers/index2.html">Design Quote Layout 2</a></li>
-				<li><a href="/rhododendron/">Pacific Rhododendron</a></li>
-				<li><a href="/responsive-recipe/">Responsive Recipe</a></li>
-				<li><a href="/recipe-minisite/index.html">Recipe Minisite</a></li>
-				<li><a href="/dark-flower/">Dark Flower</a></li>
-			</ul>
-		</li>
+			<li>
+				<a href="#">Tiny Projects</a>
+				<ul>
+					<li><a href="/favorite-recipe/index.html">Favorite Recipe</a></li>
+					<li><a href="/anni-albers/index.html">Design Quote Layout 1</a></li>
+					<li><a href="/anni-albers/index2.html">Design Quote Layout 2</a></li>
+					<li><a href="/rhododendron/">Pacific Rhododendron</a></li>
+					<li><a href="/responsive-recipe/">Responsive Recipe</a></li>
+					<li><a href="/recipe-minisite/index.html">Recipe Minisite</a></li>
+					<li><a href="/dark-flower/">Dark Flower</a></li>
+				</ul>
+			</li>
 
-		<li>
-			<a href="#">Major Project</a>
-			<ul>
-				<li><a href="/MajorProject/index.html">Major Project</a></li>
-			</ul>
-		</li>
+			<li>
+				<a href="#">Major Project</a>
+				<ul>
+					<li><a href="/MajorProject/index.html">Major Project</a></li>
+				</ul>
+			</li>
 
-	</ul>
+		</ul>
 	</nav>
 
 
