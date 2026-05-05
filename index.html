@@ -83,63 +83,60 @@
 			text-align: center;
 		}
 
-		@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
 
-			
-			#navBurger {
-				display: none;
-			}
+    :root {
+        --nav-height: 5rem;
+    }
 
-		
-			nav ul {
-				display: flex !important;
-				flex-direction: row;
-				justify-content: center;
-				align-items: center;
-				gap: 10px;
+    #navBurger {
+        display: none;
+    }
 
-				margin: 0;
-				padding: 0;
-			}
+   
+    nav > ul {
+        max-height: none ;
+        overflow: visible ;
 
-			
-			nav ul li a {
-				display: inline-block;
-				
-				width: auto;
-				margin: 0;
-				padding: 10px 15px;
-				white-space: nowrap;
-			}
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-			
-			nav ul li {
-				position: relative;
-			}
+        background-color: var(--nav-bkgd-color);
+    }
 
-			
-			nav ul li ul {
-				display: none ;
-			}
+    
+    nav > ul > li {
+        margin: 0 1rem;
+        position: relative;
+    }
 
-			nav ul li:hover ul {
-				display: block;
-				position: absolute;
-				top: 100%;
-				left: 0;
-				background: #1f2933;
-				padding: 8px;
-				border-radius: 6px;
-				min-width: 180px;
-				z-index: 10;
-			}
+    nav > ul > li > a {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        white-space: nowrap;
+    }
 
-			
-			body {
-				max-width: 1000px;
-				margin: auto;
-			}
-		}
+    
+    nav > ul > li > ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: var(--nav-bkgd-color);
+        min-width: 180px;
+    }
+
+    nav > ul > li > ul > li {
+        margin: 0;
+    }
+
+    nav > ul > li > ul > li a {
+        display: block;
+        padding: 0.8rem;
+    }
+}
 	</style>
 
 
