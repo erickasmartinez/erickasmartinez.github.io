@@ -83,7 +83,28 @@
 			text-align: center;
 		}
 
+		main {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
 
+.home {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.home-text p {
+    font-size: 1rem;
+    color: #444;
+}
 
 @media screen and (orientation: landscape) {
 
@@ -91,25 +112,24 @@
         display: none;
     }
 
-
     nav {
         height: auto;
     }
 
-    nav ul {
-        display: flex !;
+   
+    nav ul,
+    nav.clicked ul {
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
         list-style: none;
 
-     
-        max-height: none ;
-        overflow: visible ;
+        max-height: none !important;
+        overflow: visible !important;
     }
 
-   
     nav > ul > li {
         position: relative;
         margin: 0 10px;
@@ -123,17 +143,17 @@
 
     
     nav > ul > li > ul {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
 
         background: #1f2933;
         min-width: 180px;
-
-        display: none;
+        z-index: 10;
     }
 
-  
+    
     nav > ul > li.clicked > ul {
         display: block;
     }
@@ -203,18 +223,10 @@
 
 
 
+
 <body>
 
-	<h1>Erica</h1>
-  <p>Strongly willed student driven by purpose and matcha ice cream</p>
-
-  <p>
-    <a href="https://github.com/erickasmartinez/erickasmartinez.github.io">
-      GitHub Repository
-    </a>
-  </p>
-
-  <nav>
+<nav>
     <a id="navBurger">&#9776;</a>
 
 
@@ -256,6 +268,16 @@
 		</ul>
 	</nav>
 
+
+<main>
+  <div class="home">
+    
+    <div class="home-text">
+      <h1>Erica: DTC 355</h1>
+      <p>Strongly willed student driven by purpose and matcha ice cream</p>
+    </div>
+  </div>
+</main>
 
 
 </body>
