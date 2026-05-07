@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Erica's website</title>
 
-	<style>
+<style>
 
 * {
 	box-sizing: border-box;
@@ -60,7 +60,6 @@ nav {
 	cursor: pointer;
 }
 
-
 nav ul {
 	list-style: none;
 	display: none;
@@ -102,50 +101,68 @@ nav ul li ul li a {
 }
 
 
+
 @media screen and (min-width: 768px) {
 
 	#navBurger {
 		display: none;
 	}
 
+	
 	nav ul,
 	nav.clicked ul {
 		display: flex !important;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
-	}
-
-	nav > ul > li > a {
-		padding: 18px 22px;
-	}
-
-
-	nav > ul > li > ul {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		min-width: 220px;
-		display: none;
-		background: #2c3a47;
-		z-index: 100;
+		gap: 20px;
+		padding: 20px;
 	}
 
 	
-	nav > ul > li:hover > ul {
+	nav > ul > li {
+		background: #1f2933;
+		width: 220px;
+		border-radius: 10px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	
+	nav > ul > li > a {
+		text-align: center;
+		font-weight: bold;
+		padding: 18px;
 		display: block;
 	}
 
 	
-	nav > ul > li.clicked > ul {
+	nav > ul > li:hover > ul {
 		display: none;
 	}
 
-	nav > ul > li > ul > li a {
+	
+	nav > ul > li > ul {
+		display: none;
+		background: #2c3a47;
+		flex-direction: column;
+		position: static;
+	}
+
+	
+	nav > ul > li.clicked > ul {
+		display: flex;
+	}
+
+	nav > ul > li > ul li a {
 		padding: 12px 15px;
-		white-space: nowrap;
+		text-align: left;
+		font-size: 0.95rem;
+		border-top: 1px solid rgba(255,255,255,0.1);
 	}
 }
+
+
 
 	</style>
 
