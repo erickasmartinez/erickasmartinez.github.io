@@ -1,9 +1,9 @@
+
 :root {
   --nav-height: 3rem;
   --nav-bkgd-color: #111;
   --nav-text-color: white;
 }
-
 
 * {
   box-sizing: border-box;
@@ -12,31 +12,28 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f8f5f3;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  padding: 40px;
-  font-size: 20px; 
-}
+
 
 nav {
-  background: #000000; 
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
   position: relative;
 }
 
-
 #navBurger {
-  font-size: 26px;
+  font-size: 28px;
   color: white;
   cursor: pointer;
   display: block;
 }
-
 
 nav ul {
   list-style: none;
@@ -47,166 +44,153 @@ nav ul {
   flex-direction: column;
   width: 100%;
   background: #b28e8e;
+
   position: absolute;
   top: 100%;
   left: 0;
-  font-size: 12px;
-}
 
+  z-index: 1000;
+}
 
 nav.clicked ul {
   display: flex;
 }
 
-
 nav ul li {
   position: relative;
-  border-top: 1px solid #535353;
+  border-top: 1px solid #ffffff3d;
 }
-
 
 nav ul li a {
   display: block;
   padding: 15px;
   color: white;
   text-decoration: none;
+  font-size: 14px;
 }
 
 nav ul li a:hover {
-  background: #ca9292;
+  background-color: #ca9292;
 }
+
 
 
 nav ul li ul {
   position: static;
   background: #946b6b;
+
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
- 
-}
 
+  transition: max-height 0.3s ease;
+}
 
 nav ul li.clicked ul {
   max-height: 500px;
 }
 
-
 nav ul li ul li a {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
-
-@media (orientation: landscape) {
-
-
-  #navBurger {
-    display: none;
-  }
-
-  
- 
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background: none;
-    gap: 20px;
-  }
-
-  nav ul li {
-    border: none;
-  }
-
-  nav ul li a {
-    padding: 10px 15px;
-    font-size: 28px;
-  }
-
- 
-  nav ul li ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #b28e8e;
-
-    display: none;
-    max-height: none;
-  }
-
-
-  nav ul li:hover ul {
-    display: block;
-  }
-}
-
-
- header {
-   font-size: 60px; }
 
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-   
-}
-
-.Main-Photo img {
-  max-width: 100%;
-  height: auto;
-  transform: rotate(-90deg);
- 
+  width: 100%;
 }
 
 
-.about {
-  background-color: #f4f4f4;
-  color: #333;
+
+
+
+.content-section {
+  max-width: 1000px;
+  margin: auto;
   padding: 40px 20px;
-  text-align: center;
 }
 
- 
 
-.box {
-  border: 2px solid #ead4f0;
-  padding: 10px; 
-  background-color: #f9f9f9;
+
+.content-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+
+
+.content-section > p {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 18px auto;
+  font-size: 16px;
+  color: #444;
+}
+
+
+
+.step {
+  background-color: white;
+  padding: 30px 20px;
+  margin: 35px auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+
+
+
+  max-width: 850px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   text-align: center;
-
-
 }
 
 
 
-.box h3 {
-  margin: 10px 0;
-  font-size: 25px;
-  color: #060606;
+.step h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #111;
 }
 
-.box img {
-  width: 75%;
+
+
+.step p {
+  max-width: 700px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+
+.step img {
+  width: 100%;
+  max-width: 350px;
   height: auto;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+
   object-fit: cover;
-  object-position: 80% center;
 }
 
-.box:hover {
-  background-color: #0c0c0c;
-  color: white;
+
+
+.step ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 10px 0 0 0;
 }
 
-.box:hover h3 {
-  color: white;
+.step li {
+  margin-bottom: 8px;
+  font-size: 15px;
 }
-
 
 
 
@@ -214,84 +198,138 @@ main {
 .Buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
+
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .Buttons a {
   background-color: #e7cfea;
   color: #151516;
-
-  padding: 12px 20px;
-  margin: 10px;
-
-  display: inline-block;
+  padding: 12px 22px;
   text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
 
-  border-radius: 5px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
+.Buttons a:hover {
+  background-color: #d6b3db;
+}
+
+
+
+.box {
+  border: 2px solid #ead4f0;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+
+  border-radius: 14px;
+
+  transition: 0.3s ease;
 }
 
-
-
-
-.content-section {
-  padding: 40px 18px;
-  max-width: 900px;
-  margin: auto;
-}
-
-
-.content-section h2 {
-  font-size: 26px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-
-.content-section p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 16px;
-}
-
-.step {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 18px;
-  margin-bottom: 16px;
+.box img {
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.box:hover {
+  transform: translateY(-5px);
 }
 
 
-.step h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
 
-@media (orientation: landscape) and (min-width: 700px) {
+@media (orientation: landscape)  
+
+{
+
+  #navBurger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+
+    position: static;
+
+    width: auto;
+
+    background: none;
+
+    gap: 10px;
+  }
+
+  nav ul li {
+    border: none;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #b28e8e;
+
+    display: none;
+
+    max-height: none;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+
+
+
+
+
+
 
   .content-section {
-    padding: 50px 60px;
+    padding: 60px 80px;
   }
 
   .content-section h2 {
-    font-size: 32px;
+    font-size: 42px;
+      text-align: center;  }
+
+  .content-section > p {
+    font-size: 18px;
   }
 
   .step {
-    padding: 22px;
+    padding: 45px;
   }
 
   .step h3 {
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  .step p {
+    font-size: 18px;
+  }
+
+  .step img {
+    max-width: 450px;
   }
 }
