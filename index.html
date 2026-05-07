@@ -11,6 +11,7 @@
 	<!-- external and internal CSS -->
 
 	<style>
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -23,8 +24,6 @@ body {
 	color: #222;
 	line-height: 1.6;
 }
-
-
 
 h1 {
 	font-size: 2.5rem;
@@ -49,7 +48,7 @@ main {
 	text-align: center;
 }
 
-/* NAVIGATION */
+
 
 nav {
 	background: #1f2933;
@@ -64,7 +63,7 @@ nav {
 	cursor: pointer;
 }
 
-/* MAIN MENU */
+
 
 nav ul {
 	list-style: none;
@@ -85,16 +84,13 @@ nav ul li a {
 	color: white;
 	text-decoration: none;
 	padding: 15px 20px;
-	
 }
-
-
 
 nav ul li a:hover {
 	background: #32404d;
 }
 
-/* DROPDOWN MENU */
+
 
 nav ul li ul {
 	display: none;
@@ -108,6 +104,11 @@ nav ul li.clicked ul {
 nav ul li ul li a {
 	padding-left: 35px;
 	font-size: 0.95rem;
+}
+
+
+nav ul li ul {
+	display: none;
 }
 
 
@@ -134,8 +135,7 @@ nav ul li ul li a {
 		padding: 18px 22px;
 	}
 
-	/* DROPDOWN */
-
+	
 	nav > ul > li > ul {
 		position: absolute;
 		top: 100%;
@@ -146,8 +146,14 @@ nav ul li ul li a {
 		z-index: 100;
 	}
 
-	nav > ul > li.clicked > ul {
+	
+	nav > ul > li:hover > ul {
 		display: block;
+	}
+
+	
+	nav > ul > li.clicked > ul {
+		display: none;
 	}
 
 	nav > ul > li > ul > li a {
@@ -155,6 +161,109 @@ nav ul li ul li a {
 		white-space: nowrap;
 	}
 }
+
+	</style>
+
+	<script>
+		function clickNav(bodyClicked) {
+			let navHandle = document.querySelector("nav");
+			let burgerWasClicked = navHandle.classList.contains("clicked");
+			if (!bodyClicked) navHandle.classList.toggle("clicked");
+			else navHandle.classList.remove("clicked");
+
+			if (burgerWasClicked || bodyClicked) {
+				let allMenus = document.querySelectorAll("nav > ul > li");
+				for (const eachMenu of allMenus) {
+					eachMenu.classList.remove("clicked");
+				}
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+
+			document.querySelector("#navBurger").addEventListener("click", function () {
+				clickNav(false);
+			});
+
+			let allMenus = document.querySelectorAll("nav > ul > li");
+			for (const eachMenu of allMenus) {
+				eachMenu.addEventListener("click", function () {
+					let wasClicked = eachMenu.classList.contains("clicked");
+					let allMenus2 = document.querySelectorAll("nav > ul > li");
+					for (const eachMenu2 of allMenus2) {
+						eachMenu2.classList.remove("clicked");
+					}
+					if (!wasClicked) {
+						eachMenu.classList.add("clicked");
+					}
+				});
+			}
+
+			document.querySelector("html").addEventListener("click", function (e) {
+				if (!e.target.closest("nav")) {
+					clickNav(true);
+				}
+			});
+
+		});
+	</script>
+
+</head>
+
+<body>
+
+<nav>
+    <a id="navBurger">&#9776;</a>
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+
+		<li>
+			<a href="#">Activities</a>
+			<ul>
+				<li><a href="/codelogs/log1.html">Code Log 1</a></li>
+				<li><a href="/codelogs/log2.html">Code Log 2</a></li>
+				<li><a href="/codelogs/log3.html">Code Log 3</a></li>
+				<li><a href="/codelogs/log4.html">Code Log 4</a></li>
+				<li><a href="/codelogs/log5.html">Code Log 5</a></li>
+				<li><a href="/codelogs/log6.html">Code Log 6</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="#">Tiny Projects</a>
+			<ul>
+				<li><a href="/favorite-recipe/index.html">Favorite Recipe</a></li>
+				<li><a href="/anni-albers/index.html">Design Quote Layout 1</a></li>
+				<li><a href="/anni-albers/index2.html">Design Quote Layout 2</a></li>
+				<li><a href="/rhododendron/">Pacific Rhododendron</a></li>
+				<li><a href="/responsive-recipe/">Responsive Recipe</a></li>
+				<li><a href="/recipe-minisite/index.html">Recipe Minisite</a></li>
+				<li><a href="/dark-flower/">Dark Flower</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="#">Major Project</a>
+			<ul>
+				<li><a href="/MajorProject/index.html">Major Project</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</nav>
+
+<main>
+  <div class="home">
+    <div class="home-text">
+      <h1>Erica: DTC 355</h1>
+      <p>Strongly willed student driven by purpose and matcha ice cream</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
 	</style>
 
 
