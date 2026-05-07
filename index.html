@@ -11,157 +11,149 @@
 	<!-- external and internal CSS -->
 
 	<style>
-		* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-		body {
-			font-family: Arial, sans-serif;
-			background: #f4f6f8;
-			color: #222;
-			padding: 15px;
-			line-height: 1.6;
-		}
-
-		h1 {
-			font-size: 2rem;
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		p {
-			text-align: center;
-			margin: 10px 0;
-		}
+body {
+	font-family: Arial, sans-serif;
+	background: #f4f6f8;
+	color: #222;
+	line-height: 1.6;
+}
 
 
-		a {
-			color: #2b7cff;
-		}
 
-		a:hover {
-			text-decoration: underline;
-		}
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
 
-		#navBurger {
-			display: block;
-			font-size: 30px;
-			text-align: center;
-			padding: 10px;
-			background: #1f2933;
-			color: white;
-			border-radius: 6px;
-			cursor: pointer;
-			margin-bottom: 10px;
-		}
+p {
+	text-align: center;
+	color: #555;
+}
 
-		nav ul {
-			list-style: none;
-			display: none;
-			flex-direction: column;
-		}
-
-		nav.clicked ul {
-			display: flex;
-
-		}
-
-		nav ul li {
-			position: relative;
-		}
-
-		nav ul li a {
-			display: block;
-			background: #1f2933;
-			color: white;
-			padding: 10px;
-			margin: 5px 0;
-			border-radius: 6px;
-			text-decoration: none;
-			text-align: center;
-		}
-
-		main {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+main {
+	padding: 60px 20px;
+	display: flex;
+	justify-content: center;
 }
 
 .home {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    padding: 2rem;
+	max-width: 800px;
+	width: 100%;
+	text-align: center;
 }
 
-.home-text h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+/* NAVIGATION */
+
+nav {
+	background: #1f2933;
+	position: relative;
 }
 
-.home-text p {
-    font-size: 1rem;
-    color: #444;
+#navBurger {
+	display: block;
+	font-size: 30px;
+	color: white;
+	padding: 15px 20px;
+	cursor: pointer;
 }
 
-@media screen and (orientation: landscape) {
+/* MAIN MENU */
 
-    #navBurger {
-        display: none;
-    }
+nav ul {
+	list-style: none;
+	display: none;
+	flex-direction: column;
+}
 
-    nav {
-        height: auto;
-    }
+nav.clicked ul {
+	display: flex;
+}
 
-   
-    nav ul,
-    nav.clicked ul {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+nav ul li {
+	position: relative;
+}
 
-        list-style: none;
+nav ul li a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 20px;
+	
+}
 
-        max-height: none !important;
-        overflow: visible !important;
-    }
 
-    nav > ul > li {
-        position: relative;
-        margin: 0 10px;
-    }
 
-    nav > ul > li > a {
-        display: inline-block;
-        padding: 12px 16px;
-        white-space: nowrap;
-    }
+nav ul li a:hover {
+	background: #32404d;
+}
 
-    
-    nav > ul > li > ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+/* DROPDOWN MENU */
 
-        background: #1f2933;
-        min-width: 180px;
-        z-index: 10;
-    }
+nav ul li ul {
+	display: none;
+	background: #2c3a47;
+}
 
-    
-    nav > ul > li.clicked > ul {
-        display: block;
-    }
+nav ul li.clicked ul {
+	display: block;
+}
 
-    nav > ul > li > ul > li a {
-        display: block;
-        padding: 10px;
-    }
+nav ul li ul li a {
+	padding-left: 35px;
+	font-size: 0.95rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+	#navBurger {
+		display: none;
+	}
+
+	nav ul,
+	nav.clicked ul {
+		display: flex !important;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav > ul > li {
+		position: relative;
+	}
+
+	nav > ul > li > a {
+		padding: 18px 22px;
+	}
+
+	/* DROPDOWN */
+
+	nav > ul > li > ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		min-width: 220px;
+		display: none;
+		background: #2c3a47;
+		z-index: 100;
+	}
+
+	nav > ul > li.clicked > ul {
+		display: block;
+	}
+
+	nav > ul > li > ul > li a {
+		padding: 12px 15px;
+		white-space: nowrap;
+	}
 }
 	</style>
 
