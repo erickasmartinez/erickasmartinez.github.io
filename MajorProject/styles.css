@@ -17,37 +17,6 @@ body {
   line-height: 1.6;
 }
 
-header { 
-  font-size: 20px; 
-}
-
-main { 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
-  height: auto; } 
-  
-  .Main-Photo img { 
-    max-width: 100%; 
-    height: auto; 
-    transform: rotate(-90deg); } 
-    
-  .about { 
-    background-color: #f4f4f4;
-     color: #333; 
-     padding: 40px 20px; 
-     text-align: center; }
-
-header h1 {
-  text-align: center;
-}
-
-header p {
-  text-align:center;
-}
-
-
 
 
 nav {
@@ -268,7 +237,7 @@ main {
 
 .box img {
   width: 100%;
-  
+  max-width: 300px;
   border-radius: 10px;
 }
 
