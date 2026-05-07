@@ -3,12 +3,9 @@
 
 <head>
 
-	<!-- meta tags and title -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Erica's website</title>
-
-	<!-- external and internal CSS -->
 
 	<style>
 
@@ -64,7 +61,6 @@ nav {
 }
 
 
-
 nav ul {
 	list-style: none;
 	display: none;
@@ -91,7 +87,6 @@ nav ul li a:hover {
 }
 
 
-
 nav ul li ul {
 	display: none;
 	background: #2c3a47;
@@ -105,12 +100,6 @@ nav ul li ul li a {
 	padding-left: 35px;
 	font-size: 0.95rem;
 }
-
-
-nav ul li ul {
-	display: none;
-}
-
 
 
 @media screen and (min-width: 768px) {
@@ -127,15 +116,11 @@ nav ul li ul {
 		align-items: center;
 	}
 
-	nav > ul > li {
-		position: relative;
-	}
-
 	nav > ul > li > a {
 		padding: 18px 22px;
 	}
 
-	
+
 	nav > ul > li > ul {
 		position: absolute;
 		top: 100%;
@@ -168,6 +153,7 @@ nav ul li ul {
 		function clickNav(bodyClicked) {
 			let navHandle = document.querySelector("nav");
 			let burgerWasClicked = navHandle.classList.contains("clicked");
+
 			if (!bodyClicked) navHandle.classList.toggle("clicked");
 			else navHandle.classList.remove("clicked");
 
@@ -189,10 +175,12 @@ nav ul li ul {
 			for (const eachMenu of allMenus) {
 				eachMenu.addEventListener("click", function () {
 					let wasClicked = eachMenu.classList.contains("clicked");
+
 					let allMenus2 = document.querySelectorAll("nav > ul > li");
 					for (const eachMenu2 of allMenus2) {
 						eachMenu2.classList.remove("clicked");
 					}
+
 					if (!wasClicked) {
 						eachMenu.classList.add("clicked");
 					}
@@ -263,124 +251,4 @@ nav ul li ul {
 </main>
 
 </body>
-</html>
-	</style>
-
-
-	<!-- external and internal JavaScript -->
-
-	<script>
-		// function to hide/show menu items 
-		function clickNav(bodyClicked) {
-			let navHandle = document.querySelector("nav");
-			let burgerWasClicked = navHandle.classList.contains("clicked");
-			if (!bodyClicked) navHandle.classList.toggle("clicked"); // ...toggle a "clicked" class on the nav
-			else navHandle.classList.remove("clicked");
-
-			// remove menu .clicked if burger is closed
-			if (burgerWasClicked || bodyClicked) {
-				let allMenus = document.querySelectorAll("nav > ul > li");
-				for (const eachMenu of allMenus) {
-					eachMenu.classList.remove("clicked");
-				}
-			}
-		}
-
-		// load click events after DOM loaded
-		document.addEventListener("DOMContentLoaded", function () {
-
-			// respond to clicks on the burger
-			document.querySelector("#navBurger").addEventListener("click", function (e) {
-				clickNav(false);
-			});
-
-			// handles to all topline nav items
-			let allMenus = document.querySelectorAll("nav > ul > li");
-			for (const eachMenu of allMenus) {
-				// loop through collection of handles individually
-				eachMenu.addEventListener("click", function (e) {
-					let wasClicked = eachMenu.classList.contains("clicked");
-					let allMenus2 = document.querySelectorAll("nav > ul > li");
-					for (const eachMenu2 of allMenus2) {
-						eachMenu2.classList.remove("clicked");
-					}
-					if (!wasClicked) {
-						eachMenu.classList.add("clicked"); // if this is newly clicked, add click class back
-					}
-				});
-			}
-
-			// close nav if someone clicks outside nav
-			document.querySelector("html").addEventListener("click", function (e) {
-				if (!e.target.closest("nav")) {
-					clickNav(true);
-				}
-			});
-
-		});
-	</script>
-
-</head>
-
-
-
-
-<body>
-
-<nav>
-    <a id="navBurger">&#9776;</a>
-
-
-		<ul>
-			<li><a href="index.html">Home</a></li>
-
-			<li>
-				<a href="#">Activities</a>
-				<ul>
-					<li><a href="/codelogs/log1.html">Code Log 1</a></li>
-					<li><a href="/codelogs/log2.html">Code Log 2</a></li>
-					<li><a href="/codelogs/log3.html">Code Log 3</a></li>
-					<li><a href="/codelogs/log4.html">Code Log 4</a></li>
-					<li><a href="/codelogs/log5.html">Code Log 5</a></li>
-					<li><a href="/codelogs/log6.html">Code Log 6</a></li>
-				</ul>
-			</li>
-
-			<li>
-				<a href="#">Tiny Projects</a>
-				<ul>
-					<li><a href="/favorite-recipe/index.html">Favorite Recipe</a></li>
-					<li><a href="/anni-albers/index.html">Design Quote Layout 1</a></li>
-					<li><a href="/anni-albers/index2.html">Design Quote Layout 2</a></li>
-					<li><a href="/rhododendron/">Pacific Rhododendron</a></li>
-					<li><a href="/responsive-recipe/">Responsive Recipe</a></li>
-					<li><a href="/recipe-minisite/index.html">Recipe Minisite</a></li>
-					<li><a href="/dark-flower/">Dark Flower</a></li>
-				</ul>
-			</li>
-
-			<li>
-				<a href="#">Major Project</a>
-				<ul>
-					<li><a href="/MajorProject/index.html">Major Project</a></li>
-				</ul>
-			</li>
-
-		</ul>
-	</nav>
-
-
-<main>
-  <div class="home">
-    
-    <div class="home-text">
-      <h1>Erica: DTC 355</h1>
-      <p>Strongly willed student driven by purpose and matcha ice cream</p>
-    </div>
-  </div>
-</main>
-
-
-</body>
-
 </html>
